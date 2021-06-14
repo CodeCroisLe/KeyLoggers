@@ -2,7 +2,6 @@ from pynput import keyboard
 from threading import Thread
 from requests import post
 from time import sleep
-from io import StringIO
 from json import dumps
 
 
