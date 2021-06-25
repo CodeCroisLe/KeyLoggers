@@ -6,7 +6,9 @@ from json import dumps
 
 
 
-url = "URL"
+url = "http://127.0.0.1:5000/"
+
+delay = 5
 
 
 
@@ -25,7 +27,7 @@ def envoi_fichier():
     while True:
         print(post(url, headers=headers, data=dumps({"key":cle}).encode("utf-8")))
         cle = ""
-        sleep(2)
+        sleep(delay)
 
 
 
