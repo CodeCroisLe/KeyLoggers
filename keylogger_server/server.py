@@ -14,16 +14,6 @@ app = Flask(__name__)
 fichier = 0
 
 
-def get_ip():
-    if request.headers.getlist("X-Forwarded-For"):
-        try:
-            ip = request.headers.getlist("X-Forwarded-For")[0].split(",")[0]
-        except:
-            ip = request.headers.getlist("X-Forwarded-For")[0]
-    else:
-        ip = request.remote_addr
-    return ip
-
 
 
 @app.route('/', methods=['POST'])
